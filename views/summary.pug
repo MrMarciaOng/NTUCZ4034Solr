@@ -1,0 +1,390 @@
+extends layout
+
+block content
+  .col-lg-10
+    <div class="jumbotron">
+      <h1>Gun Control: Sentiment Analysis</h1>
+    </div>
+    <div class="col-md-12">
+      <canvas id="myChart2"></canvas>
+    </div>
+
+    <div class="col-md-12">
+      <h3>Pro Gun Control VS Non-Pro Gun Control in Total</h3>
+    </div>
+    <div class="col-md-6">
+    <canvas id="chart-area1"></canvas>
+    </div>
+    
+    <div class="col-md-12">
+      <h3>Keyword Analysis: politicise</h3>
+    </div>
+    <div class="col-md-6">
+    <canvas id="chart-area2"></canvas>
+    </div>
+
+    <div class="col-md-12">
+      <h3>Keyword Analysis: trump</h3>
+    </div>
+    <div class="col-md-6">
+    <canvas id="chart-area3"></canvas>
+    </div>
+
+    <div class="col-md-12">
+      <h3>Keyword Analysis: march</h3>
+    </div>
+    <div class="col-md-6">
+    <canvas id="chart-area4"></canvas>
+    </div>
+
+    <div class="col-md-12">
+      <h3>Keyword Analysis: republican</h3>
+    </div>
+    <div class="col-md-6">
+    <canvas id="chart-area5"></canvas>
+    </div>
+
+    <div class="col-md-12">
+      <h3>Keyword Analysis: democrats</h3>
+    </div>
+    <div class="col-md-6">
+    <canvas id="chart-area6"></canvas>
+    </div>
+
+    <div class="col-md-12">
+      <h3>Keyword Analysis: freedom</h3>
+    </div>
+    <div class="col-md-6">
+    <canvas id="chart-area7"></canvas>
+    </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  
+
+
+  script.
+      var ctx2 = document.getElementById("myChart2").getContext('2d');
+      var myChart2 = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['21Feb', '22Feb', '23Feb', '23Feb', '24Feb', '25Feb', '26Feb', '27Feb', '28Feb', '1Mar', '2Mar', '3Mar', '4Mar', '5Mar', '6Mar', '7Mar'],
+
+            datasets: [{
+              label: '# of Pro Gun Control Tweets',
+              backgroundColor: 'rgba(54, 162, 235, 0.2)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1,
+              data: [
+                999,
+                685,
+                634,
+                456,
+                375,
+                207,
+                999,
+                685,
+                634,
+                456,
+                507,
+                207,
+                999,
+                685,
+                634,
+                456,
+                507
+              ]
+            }, {
+              label: '# of Non-Pro Gun Control Tweets',
+              backgroundColor: 'rgba(255, 99, 132, 0.2)',
+              borderColor: 'rgba(255,99,132,1)',
+              borderWidth: 1,
+              data: [
+                -456,
+                -375,
+                -207,
+                -999,
+                -685,
+                -634,
+                -456,
+                -375,
+                -207,
+                -507,
+                -634,
+                -456,
+                -375,
+                -207,
+                -507
+              ]
+            }]
+
+
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+      });
+
+            var config1 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: [
+                7058,
+                3849
+              ],
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+              ],
+              label: 'Dataset 1'
+            }],
+            labels: [
+              'Pro Gun Control',
+              'Non-Pro Gun Control'
+            ]
+          },
+          options: {
+            responsive: true
+          }
+        };
+
+        var config2 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: [
+                39,
+                188
+              ],
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+              ],
+              label: 'Dataset 1'
+            }],
+            labels: [
+              'Pro Gun Control',
+              'Non-Pro Gun Control'
+            ]
+          },
+          options: {
+            responsive: true
+          }
+        };
+
+        var config3 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: [
+                156,
+                85
+              ],
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+              ],
+              label: 'Dataset 1'
+            }],
+            labels: [
+              'Pro Gun Control',
+              'Non-Pro Gun Control'
+            ]
+          },
+          options: {
+            responsive: true
+          }
+        };
+
+        var config4 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: [
+                34,
+                12
+              ],
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+              ],
+              label: 'Dataset 1'
+            }],
+            labels: [
+              'Pro Gun Control',
+              'Non-Pro Gun Control'
+            ]
+          },
+          options: {
+            responsive: true
+          }
+        };
+
+        var config5 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: [
+                57,
+                28
+              ],
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+              ],
+              label: 'Dataset 1'
+            }],
+            labels: [
+              'Pro Gun Control',
+              'Non-Pro Gun Control'
+            ]
+          },
+          options: {
+            responsive: true
+          }
+        };
+
+        var config6 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: [
+                131,
+                32
+              ],
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+              ],
+              label: 'Dataset 1'
+            }],
+            labels: [
+              'Pro Gun Control',
+              'Non-Pro Gun Control'
+            ]
+          },
+          options: {
+            responsive: true
+          }
+        };
+
+        var config7 = {
+          type: 'pie',
+          data: {
+            datasets: [{
+              data: [
+                57,
+                24
+              ],
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+              ],
+              label: 'Dataset 1'
+            }],
+            labels: [
+              'Pro Gun Control',
+              'Non-Pro Gun Control'
+            ]
+          },
+          options: {
+            responsive: true
+          }
+        };
+
+
+          window.onload = function() {
+          var ctx = document.getElementById('chart-area1').getContext('2d');
+          window.myPie = new Chart(ctx, config1);
+          var ctx1 = document.getElementById('chart-area2').getContext('2d');
+          window.myPie = new Chart(ctx1, config2);
+          var ctx11 = document.getElementById('chart-area3').getContext('2d');
+          window.myPie = new Chart(ctx11, config3);
+          var ctx111 = document.getElementById('chart-area4').getContext('2d');
+          window.myPie = new Chart(ctx111, config4);
+          var ctx1111 = document.getElementById('chart-area5').getContext('2d');
+          window.myPie = new Chart(ctx1111, config5);
+          var ctx11111 = document.getElementById('chart-area6').getContext('2d');
+          window.myPie = new Chart(ctx11111, config6);
+          var ctx111111 = document.getElementById('chart-area7').getContext('2d');
+          window.myPie = new Chart(ctx111111, config7);
+          };
+
+    
+
+//-   script.
+//-     let myChart = document.getElementById('myChart').getContext('2d');
+
+//-     // Global Options
+//-     Chart.defaults.global.defaultFontFamily = 'Lato';
+//-     Chart.defaults.global.defaultFontSize = 18;
+//-     Chart.defaults.global.defaultFontColor = '#777';
+
+//-     let massPopChart = new Chart(myChart, {
+//-       type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+//-       data:{
+//-         labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+//-         datasets:[{
+//-           label:'Population',
+//-           data:[
+//-             617594,
+//-             181045,
+//-             153060,
+//-             106519,
+//-             105162,
+//-             95072
+//-           ],
+//-           //backgroundColor:'green',
+//-           backgroundColor:[
+//-             'rgba(255, 99, 132, 0.6)',
+//-             'rgba(54, 162, 235, 0.6)',
+//-             'rgba(255, 206, 86, 0.6)',
+//-             'rgba(75, 192, 192, 0.6)',
+//-             'rgba(153, 102, 255, 0.6)',
+//-             'rgba(255, 159, 64, 0.6)'
+//-           ],
+//-           borderWidth:1,
+//-           borderColor:'#777',
+//-           hoverBorderWidth:3,
+//-           hoverBorderColor:'#000'
+//-         }]
+//-       },
+//-       options:{
+//-         title:{
+//-           display:true,
+//-           text:'Largest Cities In Massachusetts',
+//-           fontSize:25
+//-         },
+//-         legend:{
+//-           display:true,
+//-           position:'right',
+//-           labels:{
+//-             fontColor:'#000'
+//-           }
+//-         },
+//-         layout:{
+//-           padding:{
+//-             left:50,
+//-             right:0,
+//-             bottom:0,
+//-             top:0
+//-           }
+//-         },
+//-         tooltips:{
+//-           enabled:true
+//-         }
+//-       }
+//-     });
+
+  

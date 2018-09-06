@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    <meta property="og:site_name" content="MrMarciaong.com"/>
+    <meta property="og:title" content="Gun Control tweets from 21st Feb to 7th March 2018 "/>
+    <meta property="og:description" content="Tweets indexed by Solr"/>
+    <meta property="og:image" content="http://ir.mrmarciaong.com/picture/marcia.png">
+    <meta property="og:url" content="http://ir.mrmarciaong.com/">
+    title IRAssignment
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    //- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    script(src='/script/chart.min.js')  
+  
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+    script(src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js')  
+    script(src='https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js')  
+  body 
+    include nav.pug
+    block content
+  footer.footer
+    .row(style={background: '#f5f5f5'})
+      script(src='/script/def.js' type='text/javascript')
+      include footer.pug

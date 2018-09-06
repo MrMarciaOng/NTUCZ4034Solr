@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  //- script.
+  //-   var x = !{JSON.stringify(temp)} 
+  //-   console.log(x.title);
+  //-   console.log(x.feedback);
+
+  h1= temp.title
+ 
+  .row
+    .col-lg-8
+      form(action="/classify" method="POST")
+        .input-group
+          if temp.query
+            input.form-control(type='text' name='query' value=temp.query placeholder='Enter some text')
+          else
+            input.form-control(type='text' name='query' placeholder='Enter some text')
+          span.input-group-btn
+            button.btn.btn-default(type='submit') Submit
+  if temp.feedback
+    .row
+      .col-lg-8
+        <div class="alert alert-info alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <a href="#" class="alert-link">#{temp.feedbackMessage}</a>
+        </div>
+    h3 Did we got it correct? let us know if we are wrong
+      form(action="/classify-update" method="POST")
+        .input-group
+          if temp.query
+            <input type="hidden" value= "#{temp.query}" name="query">
+            button.btn.btn-danger.btn-lg(type='submit' value="0" name="pc") It's non pro gun control
+            button.btn.default.btn-lg(type='submit' value="0.5" name="pc") It's Neutral/News
+            button.btn.btn-success.btn-lg(type='submit' value="1" name="pc") It's pro gun control
+    
